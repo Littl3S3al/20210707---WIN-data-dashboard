@@ -154,6 +154,10 @@
   width: 2em;
 }
 
+p {
+  font-size: 1.2em;
+}
+
 h4 {
   text-transform: uppercase;
   font-size: 1.2em;
@@ -166,7 +170,8 @@ h3 {
 }
 
 h1 {
-  font-family: "Alegreya", serif;
+  font-family: "Alegreya Sans", serif;
+  font-weight: 700;
   font-size: 4em;
   margin: 0;
 }
@@ -194,28 +199,67 @@ nav {
 
 .brand-logo img {
   padding-top: 10px;
-  width: 14rem;
-}
-
-.ar-translate {
-  width: 2rem;
+  width: 16rem;
 }
 
 .sidenav-trigger {
   margin: 0 !important;
 }
 .sidenav-trigger:hover {
-  fill: #ffb000 !important;
+  fill: #ff4700 !important;
   transition: all 0.5s;
 }
 
-.sidenav {
-  background: #2eb5c3;
+.sidenav-close {
+  font-size: 3em;
+  cursor: pointer;
 }
 
-.menu-icons div {
-  margin-right: 10px;
-  display: inline-block;
+.sidenav {
+  width: 100vw;
+  padding: 10px;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#menu-text {
+  height: 100px;
+}
+#menu-text p {
+  font-size: 2em;
+}
+#menu-text a {
+  color: white;
+  transition: all 0.5s;
+}
+#menu-text a:hover {
+  color: #ff4700;
+}
+
+.social-feed a {
+  display: block;
+  margin: 5px;
+}
+.social-feed a img {
+  width: 60px;
+  height: 60px;
+}
+
+.contact a {
+  display: inline;
+  color: white;
+}
+.contact a h1 {
+  display: inline;
+  border-bottom: 5px solid #ff4700;
+}
+
+.red-rect-left {
+  width: 100px;
+  height: 20px;
+  background: #ff4700;
+  margin: 20px 0;
 }
 
 .heading {
