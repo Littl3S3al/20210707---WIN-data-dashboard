@@ -1,0 +1,92 @@
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0px 10px;
+  height: auto !important;
+  background: rgba(darken($darkBlue, 15), 0.5);
+}
+.brand-logo {
+  img {
+    padding-top: 10px;
+    width: 18rem;
+  }
+}
+.sidenav-trigger {
+  margin: 0 !important;
+  &:hover {
+    fill: $red !important;
+    transition: all 0.5s;
+  }
+}
+
+// side nav styles
+.sidenav {
+  width: 100vw;
+  padding: 10px;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.sidenav-close {
+  font-size: 3em;
+  cursor: pointer;
+}
+
+#menu-text {
+  height: 80vh;
+  p {
+    font-size: 2em;
+  }
+  i {
+    font-size: 40px;
+  }
+  a {
+    color: white;
+    transition: all 0.5s;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.social-feed {
+  height: 100px;
+  position: fixed;
+  bottom: 100px;
+  left: 30px;
+  a {
+    display: block;
+    margin: 5px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.contact {
+  height: 100px;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  a {
+    display: inline;
+    color: white;
+    h1 {
+      display: inline;
+      border-bottom: 5px solid $red;
+      transition: all 0.5s;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+.red-rect-left {
+  width: 100px;
+  height: 20px;
+  background: $red;
+  margin: 20px 0;
+}

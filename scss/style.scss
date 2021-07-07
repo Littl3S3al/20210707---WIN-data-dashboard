@@ -1,5 +1,5 @@
 // inport
-@import "var.scss", "dashboard.scss";
+@import "var.scss", "nav.scss", "dashboard.scss";
 
 p {
   font-size: 1.2em;
@@ -30,82 +30,6 @@ body#texture-bg {
   background: url("../assets/backgroundTexture.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  padding: 0px 10px;
-  height: auto !important;
-  background: rgba(darken($darkBlue, 15), 0.5);
-}
-.brand-logo {
-  img {
-    padding-top: 10px;
-    width: 16rem;
-  }
-}
-.sidenav-trigger {
-  margin: 0 !important;
-  &:hover {
-    fill: $red !important;
-    transition: all 0.5s;
-  }
-}
-
-// side nav styles
-.sidenav-close {
-  font-size: 3em;
-  cursor: pointer;
-}
-.sidenav {
-  width: 100vw;
-  padding: 10px;
-  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
-  background-size: cover;
-  color: white;
-}
-#menu-text {
-  height: 100px;
-  p {
-    font-size: 2em;
-  }
-  a {
-    color: white;
-    transition: all 0.5s;
-    &:hover {
-      color: $red;
-    }
-  }
-}
-
-.social-feed {
-  a {
-    display: block;
-    margin: 5px;
-    img {
-      width: 60px;
-      height: 60px;
-    }
-  }
-}
-
-.contact {
-  a {
-    display: inline;
-    color: white;
-    h1 {
-      display: inline;
-      border-bottom: 5px solid $red;
-    }
-  }
-}
-
-.red-rect-left {
-  width: 100px;
-  height: 20px;
-  background: $red;
-  margin: 20px 0;
 }
 
 .heading {

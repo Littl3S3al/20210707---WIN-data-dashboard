@@ -79,6 +79,98 @@
   margin: 5px auto 0 auto;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0px 10px;
+  height: auto !important;
+  background: rgba(5, 23, 58, 0.5);
+}
+
+.brand-logo img {
+  padding-top: 10px;
+  width: 18rem;
+}
+
+.sidenav-trigger {
+  margin: 0 !important;
+}
+.sidenav-trigger:hover {
+  fill: #ff4700 !important;
+  transition: all 0.5s;
+}
+
+.sidenav {
+  width: 100vw;
+  padding: 10px;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.sidenav-close {
+  font-size: 3em;
+  cursor: pointer;
+}
+
+#menu-text {
+  height: 80vh;
+}
+#menu-text p {
+  font-size: 2em;
+}
+#menu-text i {
+  font-size: 40px;
+}
+#menu-text a {
+  color: white;
+  transition: all 0.5s;
+}
+#menu-text a:hover {
+  color: #ff4700;
+}
+
+.social-feed {
+  height: 100px;
+  position: fixed;
+  bottom: 100px;
+  left: 30px;
+}
+.social-feed a {
+  display: block;
+  margin: 5px;
+}
+.social-feed a img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact {
+  height: 100px;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+}
+.contact a {
+  display: inline;
+  color: white;
+}
+.contact a h1 {
+  display: inline;
+  border-bottom: 5px solid #ff4700;
+  transition: all 0.5s;
+}
+.contact a h1:hover {
+  color: #ff4700;
+}
+
+.red-rect-left {
+  width: 100px;
+  height: 20px;
+  background: #ff4700;
+  margin: 20px 0;
+}
+
 .dataPortal {
   padding: 30px 30px 30px 30px;
 }
@@ -187,79 +279,6 @@ body#texture-bg {
   background: url("../assets/backgroundTexture.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  padding: 0px 10px;
-  height: auto !important;
-  background: rgba(5, 23, 58, 0.5);
-}
-
-.brand-logo img {
-  padding-top: 10px;
-  width: 16rem;
-}
-
-.sidenav-trigger {
-  margin: 0 !important;
-}
-.sidenav-trigger:hover {
-  fill: #ff4700 !important;
-  transition: all 0.5s;
-}
-
-.sidenav-close {
-  font-size: 3em;
-  cursor: pointer;
-}
-
-.sidenav {
-  width: 100vw;
-  padding: 10px;
-  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
-  background-size: cover;
-  color: white;
-}
-
-#menu-text {
-  height: 100px;
-}
-#menu-text p {
-  font-size: 2em;
-}
-#menu-text a {
-  color: white;
-  transition: all 0.5s;
-}
-#menu-text a:hover {
-  color: #ff4700;
-}
-
-.social-feed a {
-  display: block;
-  margin: 5px;
-}
-.social-feed a img {
-  width: 60px;
-  height: 60px;
-}
-
-.contact a {
-  display: inline;
-  color: white;
-}
-.contact a h1 {
-  display: inline;
-  border-bottom: 5px solid #ff4700;
-}
-
-.red-rect-left {
-  width: 100px;
-  height: 20px;
-  background: #ff4700;
-  margin: 20px 0;
 }
 
 .heading {
