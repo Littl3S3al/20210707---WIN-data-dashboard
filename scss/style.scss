@@ -1,0 +1,70 @@
+// inport
+@import 'var.scss', 'dashboard.scss';
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2em;
+  margin: 0;
+}
+h1 {
+  font-family: 'Alegreya', serif;
+  font-size: 4em;
+  margin: 0;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1em;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body#texture-bg {
+  background: url('../assets/backgroundTexture.jpg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0px 10px;
+  height: auto !important;
+  background: rgba(darken($darkBlue, 15), 0.5);
+}
+.brand-logo {
+  img {
+    padding-top: 10px;
+    width: 14rem;
+  }
+}
+.ar-translate {
+  width: 2rem;
+}
+.sidenav-trigger {
+  margin: 0 !important;
+  &:hover {
+    fill: $yellow !important;
+    transition: all 0.5s;
+  }
+}
+.sidenav{
+  background: $teal;
+}
+.menu-icons div {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.heading {
+  margin-top: 80px;
+}
+.red-text {
+  color: $red !important;
+}
+.underline-text {
+  text-decoration: underline;
+}

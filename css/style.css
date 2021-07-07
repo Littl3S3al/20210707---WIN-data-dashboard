@@ -1,0 +1,233 @@
+.darkBlue {
+  background: #0c3280;
+}
+
+.darkBlueMask {
+  background: rgba(46, 181, 195, 0.1);
+}
+
+.blue {
+  background: #2667ff;
+}
+
+.teal {
+  background: #2eb5c3;
+}
+
+.red {
+  background: #ff4700;
+}
+
+.yellow {
+  background: #ffb000;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.h-70 {
+  height: 70vh;
+}
+
+.rounded {
+  border-radius: 20px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.red-rect {
+  background: #ff4700;
+  width: 80px;
+  height: 10px;
+  margin: 5px auto 0 auto;
+}
+
+.dataPortal {
+  padding: 30px 30px 30px 30px;
+}
+
+.inner1,
+.inner2 {
+  padding: 0 20px !important;
+}
+
+.inner2 {
+  margin-top: 12px;
+}
+
+.switch-group {
+  padding: 5px 0;
+}
+
+.switch {
+  padding: 2px 0;
+}
+.switch label {
+  color: white;
+  font-size: 1em;
+}
+.switch span.lever {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.switch span.lever::after {
+  background-color: white;
+}
+
+.switch#switch-reported label input[type=checkbox]:checked + .lever {
+  background-color: #ffdf99;
+}
+
+.switch#switch-reported label input[type=checkbox]:checked + .lever::after {
+  background-color: #ffb000;
+}
+
+.switch#switch-action label input[type=checkbox]:checked + .lever {
+  background-color: #ffb599;
+}
+
+.switch#switch-action label input[type=checkbox]:checked + .lever::after {
+  background-color: #ff4700;
+}
+
+#africa,
+#value-africa {
+  display: none;
+}
+
+#canvas-container {
+  overflow: hidden;
+}
+
+.view-full {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.inline {
+  display: inline-block;
+  display: flex;
+  align-content: center;
+}
+
+.next-arrow {
+  margin-left: 20px;
+  margin-top: 10px;
+  transform: rotate(-90deg);
+  width: 2em;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Alegreya", serif;
+  font-size: 4em;
+  margin: 0;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1em;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body#texture-bg {
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0px 10px;
+  height: auto !important;
+  background: rgba(5, 23, 58, 0.5);
+}
+
+.brand-logo img {
+  padding-top: 10px;
+  width: 14rem;
+}
+
+.ar-translate {
+  width: 2rem;
+}
+
+.sidenav-trigger {
+  margin: 0 !important;
+}
+.sidenav-trigger:hover {
+  fill: #ffb000 !important;
+  transition: all 0.5s;
+}
+
+.sidenav {
+  background: #2eb5c3;
+}
+
+.menu-icons div {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.heading {
+  margin-top: 80px;
+}
+
+.red-text {
+  color: #ff4700 !important;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */

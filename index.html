@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Circle packing</title>
+</head>
+
+<body id="texture-bg">
+  <!-- *nav -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img src="assets/logo-white.svg" alt="Women In News" /></a>
+      <div class="menu-icons valign-wrapper right">
+        <div>
+          <a href="#">
+            <svg data-target="slide-out" class="sidenav-trigger" viewBox="0 0 100 80" width="30" height="30"
+              style="fill: white">
+              <rect y="20" width="100" height="10"></rect>
+              <rect y="50" width="100" height="10"></rect>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- *side nav -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="images/office.jpg" />
+        </div>
+        <a href="#user"><img class="circle" src="images/yuna.jpg" /></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div>
+    </li>
+    <li>
+      <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
+    </li>
+    <li><a href="#!">Second Link</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+
+  <div class="heading center-align white-text">
+    <h1>Sexual Harassment Data</h1>
+    <div class="red-rect"></div>
+  </div>
+
+  <div class="dataPortal">
+    <div class="row h-70">
+      <!-- info -->
+      <div class="col s12 m3 h-100">
+        <div class="h-100 rounded darkBlueMask"></div>
+      </div>
+
+      <!-- canvas -->
+      <div class="col s12 m6 h-100">
+        <div id="canvas-container" class="h-100 darkBlueMask rounded">
+          <div class="canvas"></div>
+        </div>
+      </div>
+
+      <!-- columns with switches -->
+      <div class="col s12 m3 h-100">
+        <div class="row h-100 flex-col d-flex">
+          <!-- select group -->
+          <div class="col s12 inner1 darkBlueMask rounded white-text">
+            <div class="content">
+              <div class="view-full">
+                <div class="inline">
+                  <h4>View Full Data</h4>
+                </div>
+                <div class="inline">
+                  <img class="next-arrow" src="assets/arrow.svg" alt="Go" />
+                </div>
+              </div>
+              <p>Take a look at the data visualizations by country</p>
+            </div>
+          </div>
+
+          <!-- switches group -->
+          <div class="col s12 inner2 flex-1 darkBlueMask rounded white-text">
+            <h4>Filter the data</h4>
+            <p>Get the whole picture by playing with the data</p>
+
+            <!-- switch group 1 -->
+            <div class="switch-group">
+              <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked name="gender" value="f" />
+                  <span class="lever"></span>
+                  female
+                </label>
+              </div>
+              <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked name="gender" value="m" />
+                  <span class="lever"></span>
+                  male
+                </label>
+              </div>
+              <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked name="gender" value="n" />
+                  <span class="lever"></span>
+                  gender non conforming (GNC)
+                </label>
+              </div>
+            </div>
+            <!-- end of switch group 1 -->
+
+            <!-- switch group 2 -->
+            <div class="switch-group">
+              <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked name="type" value="v" />
+                  <span class="lever"></span>
+                  verbal harassment
+                </label>
+              </div>
+              <!-- Switch -->
+              <div class="switch">
+                <label>
+                  <input type="checkbox" checked name="type" value="p" />
+                  <span class="lever"></span>
+                  physical harassment
+                </label>
+              </div>
+            </div>
+            <!-- end of switch group 2 -->
+
+            <!-- switch group 3 -->
+            <div class="switch-group">
+              <!-- Switch -->
+              <div class="switch" id="switch-reported">
+                <label>
+                  <input type="checkbox" name="reported" value="reported" />
+                  <span class="lever"></span>
+                  was the incident reported?
+                </label>
+              </div>
+              <!-- Switch -->
+              <div class="switch" id="switch-action">
+                <label>
+                  <input type="checkbox" name="action" value="action" />
+                  <span class="lever"></span>
+                  was action taken?
+                </label>
+              </div>
+            </div>
+            <!-- end of switch group 3 -->
+          </div>
+          <!--end of switches group-->
+        </div>
+      </div>
+    </div>
+    <!-- end of inner row-->
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- D3 library -->
+  <script src="https://d3js.org/d3.v6.js"></script>
+
+  <script src="js/var.js"></script>
+
+  <script src="js/bubble.js"></script>
+
+  <script src="js/data.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

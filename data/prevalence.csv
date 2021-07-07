@@ -1,0 +1,82 @@
+﻿region,country,gender,type,5 times or more,two to three times,once,can't remember,never
+africa,africa,gender non binary,verbal,19,17,17,14,9
+africa,botswana,gender non binary,verbal,0,0,0,0,0
+africa,kenya,gender non binary,verbal,0,0,100,0,0
+africa,malawi,gender non binary,verbal,0,0,0,50,50
+africa,rwanda,gender non binary,verbal,0,33,33,33,0
+africa,tanzania,gender non binary,verbal,100,0,0,0,0
+africa,uganda,gender non binary,verbal,0,0,0,0,0
+africa,zambia,gender non binary,verbal,50,0,0,25,25
+africa,zimbabwe,gender non binary,verbal,0,100,0,0,0
+africa,africa,men,verbal,6,17,9,13,56
+africa,botswana,men,verbal,0,50,25,0,25
+africa,kenya,men,verbal,10,15,5,10,60
+africa,malawi,men,verbal,5,3,5,11,76
+africa,rwanda,men,verbal,2,10,5,12,71
+africa,tanzania,men,verbal,0,15,0,23,62
+africa,uganda,men,verbal,12,6,12,12,59
+africa,zambia,men,verbal,18,24,18,12,29
+africa,zimbabwe,men,verbal,0,11,0,22,67
+africa,africa,women,verbal,33,17,7,16,27
+africa,botswana,women,verbal,41,7,7,15,30
+africa,kenya,women,verbal,55,15,10,10,11
+africa,malawi,women,verbal,17,30,9,13,30
+africa,rwanda,women,verbal,17,19,5,17,42
+africa,tanzania,women,verbal,20,15,13,17,36
+africa,uganda,women,verbal,45,16,3,13,24
+africa,zambia,women,verbal,40,19,11,15,15
+africa,zimbabwe,women,verbal,27,12,2,31,29
+africa,africa,gender non binary,physical,3,0,32,3,36
+africa,botswana,gender non binary,physical,0,0,0,0,0
+africa,kenya,gender non binary,physical,0,0,100,0,0
+africa,malawi,gender non binary,physical,0,0,0,25,75
+africa,rwanda,gender non binary,physical,0,0,33,0,67
+africa,tanzania,gender non binary,physical,0,0,100,0,0
+africa,uganda,gender non binary,physical,0,0,0,0,0
+africa,zambia,gender non binary,physical,25,0,25,0,50
+africa,zimbabwe,gender non binary,physical,0,0,0,0,100
+africa,africa,men,physical,4,10,4,7,75
+africa,botswana,men,physical,0,25,0,0,75
+africa,kenya,men,physical,0,15,5,0,80
+africa,malawi,men,physical,0,0,0,11,89
+africa,rwanda,men,physical,5,2,5,0,88
+africa,tanzania,men,physical,0,15,8,15,62
+africa,uganda,men,physical,6,12,12,0,71
+africa,zambia,men,physical,18,12,6,18,47
+africa,zimbabwe,men,physical,0,0,0,11,89
+africa,africa,women,physical,12,13,14,7,54
+africa,botswana,women,physical,15,11,22,11,41
+africa,kenya,women,physical,16,13,23,5,44
+africa,malawi,women,physical,4,13,13,4,65
+africa,rwanda,women,physical,9,10,10,12,59
+africa,tanzania,women,physical,16,5,17,11,51
+africa,uganda,women,physical,18,21,13,3,45
+africa,zambia,women,physical,11,19,6,6,57
+africa,zimbabwe,women,physical,8,8,10,6,67
+africa,africa,gender non binary,witnessing,4,25,7,25,14
+africa,botswana,gender non binary,witnessing,0,0,0,0,0
+africa,kenya,gender non binary,witnessing,0,100,0,0,0
+africa,malawi,gender non binary,witnessing,0,0,0,75,25
+africa,rwanda,gender non binary,witnessing,33,0,33,0,33
+africa,tanzania,gender non binary,witnessing,0,100,0,0,0
+africa,uganda,gender non binary,witnessing,0,0,0,0,0
+africa,zambia,gender non binary,witnessing,0,0,25,25,50
+africa,zimbabwe,gender non binary,witnessing,0,0,0,100,0
+africa,africa,men,witnessing,13,16,20,9,43
+africa,botswana,men,witnessing,50,25,25,0,0
+africa,kenya,men,witnessing,0,45,20,5,30
+africa,malawi,men,witnessing,0,5,14,3,78
+africa,rwanda,men,witnessing,5,5,15,7,68
+africa,tanzania,men,witnessing,0,0,39,15,46
+africa,uganda,men,witnessing,18,18,18,6,41
+africa,zambia,men,witnessing,6,6,18,24,47
+africa,zimbabwe,men,witnessing,22,22,11,11,33
+africa,africa,women,witnessing,21,16,12,11,39
+africa,botswana,women,witnessing,26,15,4,15,41
+africa,kenya,women,witnessing,37,21,16,3,23
+africa,malawi,women,witnessing,9,15,11,11,54
+africa,rwanda,women,witnessing,9,10,15,7,59
+africa,tanzania,women,witnessing,9,13,24,18,36
+africa,uganda,women,witnessing,37,18,5,5,34
+africa,zambia,women,witnessing,19,17,9,9,47
+africa,zimbabwe,women,witnessing,25,14,16,22,22

@@ -1,0 +1,74 @@
+// main containers
+.dataPortal {
+  padding: 30px 30px 30px 30px;
+}
+
+// lhs col
+.inner1,
+.inner2 {
+  padding: 0 20px !important;
+}
+.inner2 {
+  margin-top: 12px;
+}
+
+// switches
+.switch-group {
+  padding: 5px 0;
+}
+.switch {
+  padding: 2px 0;
+  label {
+    color: white;
+    font-size: 1em;
+  }
+  span.lever {
+    background-color: rgba(255, 255, 255, 0.5);
+    &::after {
+      background-color: white;
+    }
+  }
+}
+
+.switch#switch-reported label input[type='checkbox']:checked + .lever {
+  background-color: lighten($yellow, 30%);
+}
+.switch#switch-reported label input[type='checkbox']:checked + .lever::after {
+  background-color: $yellow;
+}
+
+.switch#switch-action label input[type='checkbox']:checked + .lever {
+  background-color: lighten($red, 30%);
+}
+.switch#switch-action label input[type='checkbox']:checked + .lever::after {
+  background-color: $red;
+}
+
+//  styling for Africa bubble
+#africa,
+#value-africa {
+  display: none;
+}
+
+// allow canvas to zoom and hide excess
+#canvas-container {
+  overflow: hidden;
+}
+
+// styling for fulldata buttons
+.view-full {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+.inline {
+  display: inline-block;
+  display: flex;
+  align-content: center;
+}
+.next-arrow {
+  margin-left: 20px;
+  margin-top: 10px;
+  transform: rotate(-90deg);
+  width: 2em;
+}

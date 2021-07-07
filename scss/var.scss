@@ -1,0 +1,75 @@
+// colours
+$darkBlue: #0c3280;
+$blue: #2667ff;
+$teal: #2eb5c3;
+$red: #ff4700;
+$yellow: #ffb000;
+
+.darkBlue {
+  background: $darkBlue;
+}
+.darkBlueMask {
+  background: rgba($teal, 0.1);
+}
+.blue {
+  background: $blue;
+}
+.teal {
+  background: $teal;
+}
+.red {
+  background: $red;
+}
+.yellow {
+  background: $yellow;
+}
+
+// flex box
+.d-flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-content: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+
+// gen styles
+.h-100 {
+  height: 100%;
+}
+.h-80 {
+  height: 80vh;
+}
+.h-70 {
+  height: 70vh;
+}
+.rounded {
+  border-radius: 20px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.w-100 {
+  width: 100%;
+}
+
+// this page specific elements
+.red-rect {
+  background: $red;
+  width: 80px;
+  height: 10px;
+  margin: 5px auto 0 auto;
+}
