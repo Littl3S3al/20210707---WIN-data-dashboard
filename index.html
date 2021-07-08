@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <!-- Compiled and minified CSS -->
     <link
@@ -28,6 +22,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Circle packing</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
   </head>
 
   <body id="texture-bg">
@@ -116,48 +111,43 @@
     </div>
     <!--end of side nav-->
 
-    <div class="heading center-align white-text">
-      <h1>Sexual Harassment Data</h1>
-      <div class="red-rect"></div>
-    </div>
+    <!-- *dashboard & links -->
+    <div class="container-fluid">
 
-    <div class="dataPortal">
-      <div class="row h-70">
-        <!-- info -->
-        <div class="col s12 m3 h-100">
-          <div class="h-100 rounded darkBlueMask"></div>
-        </div>
-
-        <!-- canvas -->
-        <div class="col s12 m6 h-100">
-          <div id="canvas-container" class="h-100 darkBlueMask rounded">
-            <div class="canvas"></div>
+      <!-- Heading container -->
+    <div class="row opening grid-item valign-wrapper">
+      <div class="col s12">
+        <div class="row">
+          <div class="col s6"></div>
+          <div class="col s6">
+            <h1>Sexual Harassment Data</h1>
+            <div class="red-block-fat"></div>
+            <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aliquid cumque nobis nostrum natus possimus vitae optio eligendi maiores eaque porro id vel ad, molestias impedit ipsa eos nam! Provident.</p>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- columns with switches -->
-        <div class="col s12 m3 h-100">
-          <div class="row h-100 flex-col d-flex">
-            <!-- select group -->
-            <div class="col s12 inner1 darkBlueMask rounded white-text">
-              <div class="content">
-                <div class="view-full">
-                  <div class="inline">
-                    <h4>View Full Data</h4>
-                  </div>
-                  <div class="inline">
-                    <img class="next-arrow" src="assets/arrow.svg" alt="Go" />
-                  </div>
-                </div>
-                <p>Take a look at the data visualizations by country</p>
-              </div>
-            </div>
-
-            <!-- switches group -->
-            <div class="col s12 inner2 flex-1 darkBlueMask rounded white-text">
-              <h4>Filter the data</h4>
-              <p>Get the whole picture by playing with the data</p>
-
+    
+    <div class="row grid-container">
+      <!-- bubbles -->
+      <div class="col s12 m8 grid-item darkBlueMask hp-100">
+        <div id="canvas-container" class="hp-80">
+          <div class="canvas"></div>
+        </div>
+        <div class="switches hp-20 row">
+          <!-- column for text -->
+          <div class="col s6 p-20">
+            <h4 class="flow-text">Filters</h4>
+            <p class="flow-text">
+              Click on toggles to filter by gender, verbal or physical harassment and action taken
+            </p>
+          </div>
+          <!-- column for toggles -->
+          <div class="col s6">
+            <div class="col s4">
+              <h4 class="center">Gender</h4>
+              <hr>
               <!-- switch group 1 -->
               <div class="switch-group">
                 <!-- Switch -->
@@ -165,7 +155,7 @@
                   <label>
                     <input type="checkbox" checked name="gender" value="f" />
                     <span class="lever"></span>
-                    female
+                    F
                   </label>
                 </div>
                 <!-- Switch -->
@@ -173,7 +163,7 @@
                   <label>
                     <input type="checkbox" checked name="gender" value="m" />
                     <span class="lever"></span>
-                    male
+                    M
                   </label>
                 </div>
                 <!-- Switch -->
@@ -181,20 +171,23 @@
                   <label>
                     <input type="checkbox" checked name="gender" value="n" />
                     <span class="lever"></span>
-                    gender non conforming (GNC)
+                    GNC
                   </label>
                 </div>
               </div>
               <!-- end of switch group 1 -->
-
-              <!-- switch group 2 -->
-              <div class="switch-group">
+            </div>
+            <div class="col s4">
+              <h4 class="center">Type</h4>
+              <hr>
+               <!-- switch group 2 -->
+               <div class="switch-group">
                 <!-- Switch -->
                 <div class="switch">
                   <label>
                     <input type="checkbox" checked name="type" value="v" />
                     <span class="lever"></span>
-                    verbal harassment
+                    verbal
                   </label>
                 </div>
                 <!-- Switch -->
@@ -202,12 +195,14 @@
                   <label>
                     <input type="checkbox" checked name="type" value="p" />
                     <span class="lever"></span>
-                    physical harassment
+                    physical
                   </label>
                 </div>
               </div>
-              <!-- end of switch group 2 -->
-
+            </div>
+            <div class="col s4">
+              <h4 class="center">action</h4>
+              <hr>
               <!-- switch group 3 -->
               <div class="switch-group">
                 <!-- Switch -->
@@ -215,7 +210,7 @@
                   <label>
                     <input type="checkbox" name="reported" value="reported" />
                     <span class="lever"></span>
-                    was the incident reported?
+                    reported
                   </label>
                 </div>
                 <!-- Switch -->
@@ -223,18 +218,61 @@
                   <label>
                     <input type="checkbox" name="action" value="action" />
                     <span class="lever"></span>
-                    was action taken?
+                    waction
                   </label>
                 </div>
               </div>
               <!-- end of switch group 3 -->
             </div>
-            <!--end of switches group-->
+          </div>
+        </div>
+          
+      </div>
+    </div>
+
+    </div>
+
+    <!-- *footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <div class="red-block"></div>
+            <h2 class="white-text">More on Sexual Harassment in the Media</h2>
+          </div>
+          <div class="col l2 offset-l1 s12">
+            <div class="red-block-short"></div>
+            <h5 class="white-text">Research</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#">Get PDF Reports</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Read Articles</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <div class="red-block-short"></div>
+            <h5 class="white-text">Toolkit</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#">What Is Sexual Harassment</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">How To Deal With Sexual Harassment</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">How To Deal With Sexual Harassment</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Resources</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Testimonies</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Support Directory</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Glossary</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- end of inner row-->
-    </div>
+      <div class="footer-copyright">
+        <div class="container flow-text">
+        © 2021 WAN-IFRA
+        <a class="grey-text text-lighten-4 right valign-wrapper flow-text" href="www.lauraannseal.com">
+          <img src="assets/images/lasLogoWhite.svg" alt="LAS" style="display: inline-block; width: 50px; margin-right: 5px">
+          Powered by LAS
+        </a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

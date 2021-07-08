@@ -1,4 +1,43 @@
+// container-fluid
+.container-fluid{
+  margin: 100px 50px 50px 50px;
+}
+
 // main containers
+.grid-item{
+  border-radius: 25px;
+  margin: 20px;
+  color: white;
+}
+.grid-container{
+  height: 90vh;
+  margin: 20px;
+}
+
+.opening{
+  min-height: 80vh;
+  padding: 50px;
+  background: url('../assets/images/media-manager.jpg') center left no-repeat;
+  background-size: cover;
+}
+
+
+
+// allow canvas to zoom and hide excess
+#canvas-container {
+  overflow: hidden;
+}
+.switches{
+  border-top: 1px solid $blue;
+}
+
+
+
+
+
+
+
+
 .dataPortal {
   padding: 30px 30px 30px 30px;
 }
@@ -50,10 +89,7 @@
   display: none;
 }
 
-// allow canvas to zoom and hide excess
-#canvas-container {
-  overflow: hidden;
-}
+
 
 // styling for fulldata buttons
 .view-full {

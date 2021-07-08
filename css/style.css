@@ -42,16 +42,28 @@
   flex: 1;
 }
 
-.h-100 {
+.hp-100 {
   height: 100%;
 }
 
-.h-80 {
-  height: 80vh;
+.hp-80 {
+  height: 80%;
 }
 
-.h-70 {
-  height: 70vh;
+.hp-70 {
+  height: 70%;
+}
+
+.hp-30 {
+  height: 30%;
+}
+
+.hp-20 {
+  height: 20%;
+}
+
+.p-20 {
+  padding: 20px;
 }
 
 .rounded {
@@ -171,6 +183,36 @@ nav {
   margin: 20px 0;
 }
 
+.container-fluid {
+  margin: 100px 50px 50px 50px;
+}
+
+.grid-item {
+  border-radius: 25px;
+  margin: 20px;
+  color: white;
+}
+
+.grid-container {
+  height: 90vh;
+  margin: 20px;
+}
+
+.opening {
+  min-height: 80vh;
+  padding: 50px;
+  background: url("../assets/images/media-manager.jpg") center left no-repeat;
+  background-size: cover;
+}
+
+#canvas-container {
+  overflow: hidden;
+}
+
+.switches {
+  border-top: 1px solid #2667ff;
+}
+
 .dataPortal {
   padding: 30px 30px 30px 30px;
 }
@@ -223,10 +265,6 @@ nav {
   display: none;
 }
 
-#canvas-container {
-  overflow: hidden;
-}
-
 .view-full {
   display: flex;
   width: 100%;
@@ -250,6 +288,10 @@ p {
   font-size: 1.2em;
 }
 
+h5 {
+  font-weight: 700;
+}
+
 h4 {
   text-transform: uppercase;
   font-size: 1.2em;
@@ -264,13 +306,13 @@ h3 {
 h1 {
   font-family: "Alegreya Sans", serif;
   font-weight: 700;
-  font-size: 4em;
+  font-size: 6em;
   margin: 0;
 }
 
 body {
   font-family: "Alegreya Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -281,16 +323,35 @@ body#texture-bg {
   background-attachment: fixed;
 }
 
-.heading {
-  margin-top: 80px;
+.red-block-fat {
+  width: 150px;
+  height: 30px;
+  background: #ff4700;
 }
 
-.red-text {
-  color: #ff4700 !important;
+.red-block {
+  width: 100px;
+  height: 10px;
+  background: #ff4700;
 }
 
-.underline-text {
-  text-decoration: underline;
+.red-block-short {
+  width: 40px;
+  height: 10px;
+  background: #ff4700;
+}
+
+.page-footer {
+  margin-top: 100px;
+  padding: 50px 0 0 0;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-top: white 1px solid;
+}
+.page-footer .footer-copyright {
+  background: rgba(72, 79, 90, 0.2);
+  padding-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
