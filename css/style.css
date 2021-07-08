@@ -167,12 +167,12 @@ nav {
   display: inline;
   color: white;
 }
-.contact a h1 {
+.contact a h2 {
   display: inline;
   border-bottom: 5px solid #ff4700;
   transition: all 0.5s;
 }
-.contact a h1:hover {
+.contact a h2:hover {
   color: #ff4700;
 }
 
