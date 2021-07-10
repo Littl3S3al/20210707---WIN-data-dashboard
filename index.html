@@ -115,9 +115,9 @@
     <div class="container-fluid">
 
       <!-- Heading container -->
-    <div class="row opening grid-item valign-wrapper">
+    <div class="row grid-item-80">
       <div class="col s12">
-        <div class="row">
+        <div class="grid-item-inner opening valign-wrapper">
           <div class="col s6"></div>
           <div class="col s6">
             <h1>Sexual Harassment Data</h1>
@@ -125,108 +125,143 @@
             <p class="flow-text">Get a snapshot of the scale of sexual harassment in media organisations and drill down to see what action is being taken to address the problem. Drawn from research by Women in News in 2020 and 2021.</p>
           </div>
         </div>
+          
+        
       </div>
     </div>
 
     
     <div class="row grid-container">
       <!-- bubbles -->
-      <div class="col s12 m8 grid-item darkBlueMask hp-100">
-        <div id="canvas-container" class="hp-80">
-          <div class="canvas"></div>
-        </div>
-        <div class="switches hp-20 row">
-          <!-- column for text -->
-          <div class="col s6 p-20">
-            <h4 class="flow-text">Filters</h4>
-            <p class="flow-text">
-              Click on toggles to  filter results by gender, type of harassment and action taken.
-            </p>
+      <div class="col s12 m9 grid-item">
+        <div class="grid-item-inner darkBlueMask">
+          <div id="canvas-container" class="hp-80">
+            <div class="canvas"></div>
           </div>
-          <!-- column for toggles -->
-          <div class="col s6">
-            <div class="col s4">
-              <h4 class="center">Gender</h4>
-              <hr>
-              <!-- switch group 1 -->
-              <div class="switch-group">
-                <!-- Switch -->
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" checked name="gender" value="f" />
-                    <span class="lever"></span>
-                    F
-                  </label>
-                </div>
-                <!-- Switch -->
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" checked name="gender" value="m" />
-                    <span class="lever"></span>
-                    M
-                  </label>
-                </div>
-                <!-- Switch -->
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" checked name="gender" value="n" />
-                    <span class="lever"></span>
-                    GNC
-                  </label>
-                </div>
-              </div>
-              <!-- end of switch group 1 -->
+          <div class="switches hp-20">
+            <!-- column for text -->
+            <div class="col s6 p-20">
+              <h4 class="flow-text">Filters</h4>
+              <p class="flow-text">
+                Click on toggles to  filter results by gender, type of harassment and action taken.
+              </p>
             </div>
-            <div class="col s4">
-              <h4 class="center">Type</h4>
-              <hr>
-               <!-- switch group 2 -->
-               <div class="switch-group">
-                <!-- Switch -->
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" checked name="type" value="v" />
-                    <span class="lever"></span>
-                    verbal
-                  </label>
+            <!-- column for toggles -->
+            <div class="col s6">
+              <div class="col s4">
+                <h4 class="center">Gender</h4>
+                <hr>
+                <!-- switch group 1 -->
+                <div class="switch-group">
+                  <!-- Switch -->
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" checked name="gender" value="f" />
+                      <span class="lever"></span>
+                      F
+                    </label>
+                  </div>
+                  <!-- Switch -->
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" checked name="gender" value="m" />
+                      <span class="lever"></span>
+                      M
+                    </label>
+                  </div>
+                  <!-- Switch -->
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" checked name="gender" value="n" />
+                      <span class="lever"></span>
+                      GNC
+                    </label>
+                  </div>
                 </div>
-                <!-- Switch -->
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" checked name="type" value="p" />
-                    <span class="lever"></span>
-                    physical
-                  </label>
+                <!-- end of switch group 1 -->
+              </div>
+              <div class="col s4">
+                <h4 class="center">Type</h4>
+                <hr>
+                 <!-- switch group 2 -->
+                 <div class="switch-group">
+                  <!-- Switch -->
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" checked name="type" value="v" />
+                      <span class="lever"></span>
+                      verbal
+                    </label>
+                  </div>
+                  <!-- Switch -->
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" checked name="type" value="p" />
+                      <span class="lever"></span>
+                      physical
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col s4">
-              <h4 class="center">action</h4>
-              <hr>
-              <!-- switch group 3 -->
-              <div class="switch-group">
-                <!-- Switch -->
-                <div class="switch" id="switch-reported">
-                  <label>
-                    <input type="checkbox" name="reported" value="reported" />
-                    <span class="lever"></span>
-                    reported
-                  </label>
+              <div class="col s4">
+                <h4 class="center">action</h4>
+                <hr>
+                <!-- switch group 3 -->
+                <div class="switch-group">
+                  <!-- Switch -->
+                  <div class="switch" id="switch-reported">
+                    <label>
+                      <input type="checkbox" name="reported" value="reported" />
+                      <span class="lever"></span>
+                      reported
+                    </label>
+                  </div>
+                  <!-- Switch -->
+                  <div class="switch" id="switch-action">
+                    <label>
+                      <input type="checkbox" name="action" value="action" />
+                      <span class="lever"></span>
+                      waction
+                    </label>
+                  </div>
                 </div>
-                <!-- Switch -->
-                <div class="switch" id="switch-action">
-                  <label>
-                    <input type="checkbox" name="action" value="action" />
-                    <span class="lever"></span>
-                    waction
-                  </label>
-                </div>
+                <!-- end of switch group 3 -->
               </div>
-              <!-- end of switch group 3 -->
             </div>
           </div>
         </div>
           
+      </div>
+
+      <div class="col s12 m3 grid-item d-flex flex-col space-between">
+        <div class="grid-item-inner darkBlueMask hp-32 valign-wrapper">
+          <div class="col s8">
+            <h3>View Full Data</h3>
+            <p>Numbers and statistics from the latest research</p>
+          </div>
+          <div class="col s3">
+            <img class="next-arrow" src="assets/arrow.svg" alt="">
+          </div>
+        </div>
+        <div class="grid-item-inner darkBlueMask hp-32 valign-wrapper">
+          <div class="col s8">
+            <h3>Read Article</h3>
+            <p>How we make sense of the numbers </p>
+          </div>
+          <div class="col s3">
+            <img class="next-arrow" src="assets/arrow.svg" alt="">
+          </div>
+        </div>
+        <div class="grid-item-inner darkBlueMask hp-32 valign-wrapper">
+          <div class="col s8">
+            <h3>Get PDF report</h3>
+            <p>The Africa report is available to download</p>
+          </div>
+          <div class="col s3">
+            <img class="next-arrow" src="assets/arrow.svg" alt="">
+          </div>
+        </div>
+        
       </div>
     </div>
 

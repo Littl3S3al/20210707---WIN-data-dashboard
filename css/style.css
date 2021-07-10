@@ -3,7 +3,7 @@
 }
 
 .darkBlueMask {
-  background: rgba(46, 181, 195, 0.1);
+  background: rgba(38, 103, 255, 0.1);
 }
 
 .blue {
@@ -30,12 +30,24 @@
   justify-content: center;
 }
 
+.justify-stretch {
+  align-content: stretch;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 .align-center {
   align-content: center;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-1 {
@@ -54,8 +66,12 @@
   height: 70%;
 }
 
-.hp-30 {
-  height: 30%;
+.hp-33 {
+  height: 33%;
+}
+
+.hp-32 {
+  height: 32%;
 }
 
 .hp-20 {
@@ -95,12 +111,11 @@ nav {
   position: fixed;
   top: 0;
   padding: 0px 10px;
-  height: auto !important;
   background: rgba(5, 23, 58, 0.5);
 }
 
 .brand-logo img {
-  padding-top: 10px;
+  margin: 10px 0 5px 0;
   width: 18rem;
 }
 
@@ -183,26 +198,47 @@ nav {
   margin: 20px 0;
 }
 
+.page-footer {
+  margin-top: 100px;
+  padding: 50px 0 0 0;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-top: white 1px solid;
+}
+.page-footer .footer-copyright {
+  background: linear-gradient(90deg, rgba(63, 161, 252, 0.5) 0%, rgba(9, 9, 121, 0.5) 45%, rgba(46, 217, 195, 0.5) 100%);
+  padding-bottom: 50px;
+}
+
 .container-fluid {
   margin: 100px 50px 50px 50px;
 }
 
-.grid-item {
-  border-radius: 25px;
-  margin: 20px;
+.grid-container {
+  height: 90vh;
   color: white;
 }
 
-.grid-container {
-  height: 90vh;
-  margin: 20px;
+.grid-item-80 {
+  height: 80%;
+}
+
+.grid-item {
+  height: 100%;
+}
+
+.grid-item-inner {
+  width: 100%;
+  border-radius: 25px;
+  color: white;
 }
 
 .opening {
-  min-height: 80vh;
-  padding: 50px;
+  height: 80vh;
   background: url("../assets/images/media-manager.jpg") center left no-repeat;
   background-size: cover;
+  width: 100%;
 }
 
 #canvas-container {
@@ -339,19 +375,6 @@ body#texture-bg {
   width: 40px;
   height: 10px;
   background: #ff4700;
-}
-
-.page-footer {
-  margin-top: 100px;
-  padding: 50px 0 0 0;
-  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  border-top: white 1px solid;
-}
-.page-footer .footer-copyright {
-  background: rgba(72, 79, 90, 0.2);
-  padding-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

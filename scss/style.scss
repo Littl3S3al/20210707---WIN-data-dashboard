@@ -50,16 +50,7 @@ body#texture-bg {
   height: 10px;
   background: $red;
 }
-
-.page-footer{
-  margin-top: 100px;
-  padding: 50px 0 0 0;
-  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  border-top: white 1px solid;
-  .footer-copyright{
-    background: rgb(72, 79, 90, 0.2);
-    padding-bottom: 50px;
-  }
+.red-arrow{
+  
 }
+

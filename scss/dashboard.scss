@@ -4,21 +4,29 @@
 }
 
 // main containers
-.grid-item{
-  border-radius: 25px;
-  margin: 20px;
-  color: white;
-}
 .grid-container{
   height: 90vh;
-  margin: 20px;
+  color: white;
+}
+.grid-item-80{
+  height: 80%;
+}
+.grid-item{
+  height: 100%;
+}
+.grid-item-inner{
+  width: 100%;
+  border-radius: 25px;
+  color: white;
 }
 
+
+
 .opening{
-  min-height: 80vh;
-  padding: 50px;
+  height: 80vh;
   background: url('../assets/images/media-manager.jpg') center left no-repeat;
   background-size: cover;
+  width: 100%;
 }
 
 

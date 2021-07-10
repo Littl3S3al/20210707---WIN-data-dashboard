@@ -2,12 +2,11 @@ nav {
   position: fixed;
   top: 0;
   padding: 0px 10px;
-  height: auto !important;
   background: rgba(darken($darkBlue, 15), 0.5);
 }
 .brand-logo {
   img {
-    padding-top: 10px;
+    margin: 10px 0 5px 0;
     width: 18rem;
   }
 }
@@ -89,4 +88,19 @@ nav {
   height: 20px;
   background: $red;
   margin: 20px 0;
+}
+
+
+// *footer
+.page-footer{
+  margin-top: 100px;
+  padding: 50px 0 0 0;
+  background: url("../assets/backgroundTexture.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-top: white 1px solid;
+  .footer-copyright{
+    background: $gradient-opaque;
+    padding-bottom: 50px;
+  }
 }
