@@ -237,17 +237,17 @@ function translateTween(d) {
 
 // function for zooming
 
-svg.call(
-  d3
-    .zoom()
-    .extent([
-      [0, 0],
-      [width, height],
-    ])
-    .scaleExtent([1, 8])
-    .on('zoom', zoomed)
-);
+// svg.call(
+//   d3
+//     .zoom()
+//     .extent([
+//       [0, 0],
+//       [width, height],
+//     ])
+//     .scaleExtent([1, 8])
+//     .on('zoom', zoomed)
+// );
 
-function zoomed({ transform }) {
-  svg.attr('transform', transform);
-}
+// function zoomed({ transform }) {
+//   svg.attr('transform', transform);
+// }

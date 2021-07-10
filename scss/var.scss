@@ -53,24 +53,14 @@ $gradient-opaque: linear-gradient(90deg, rgba(63,161,252,0.5) 0%, rgba(9,9,121,0
 }
 
 
-// *height styles
-.hp-100 {
-  height: 100%;
-}
-.hp-80 {
-  height: 80%;
-}
-.hp-70 {
-  height: 70%;
-}
-.hp-33{
-  height: 33%;
-}
-.hp-32{
-  height: 32%;
-}
-.hp-20{
-  height: 20%;
+// *height style
+$start : 0;
+$end: 100;
+
+@for $i from $start through $end {
+  .hp-#{$i} {
+    height: ($i) * 1%;
+  }
 }
 
 

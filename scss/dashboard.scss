@@ -37,6 +37,7 @@
 }
 .switches{
   border-top: 1px solid $blue;
+  padding-bottom: 15px;
 }
 
 
@@ -100,19 +101,16 @@
 
 
 // styling for fulldata buttons
-.view-full {
-  display: flex;
-  width: 100%;
-  height: 50px;
-}
-.inline {
-  display: inline-block;
-  display: flex;
-  align-content: center;
-}
 .next-arrow {
   margin-left: 20px;
   margin-top: 10px;
   transform: rotate(-90deg);
   width: 2em;
+}
+#dash-link-1, #dash-link-2, #dash-link-3{
+  transition: all 0.5s;
+  &:hover{
+    background: rgba($teal, 0.4);
+    cursor: pointer;
+  }
 }

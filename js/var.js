@@ -10,7 +10,6 @@ const resizeEvent = () => {
     .select('.canvas')
     .append('svg')
     .attr('transform-origin', '0 0')
-    .style('cursor', 'pointer')
     .attr('viewBox', `0 0 ${width} ${height}`);
 
   graph = svg.append('g').attr('transform', 'translate(50, 50)');
