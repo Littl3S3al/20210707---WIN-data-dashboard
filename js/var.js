@@ -12,12 +12,12 @@ const resizeEvent = () => {
     .attr('transform-origin', '0 0')
     .attr('viewBox', `0 0 ${width} ${height}`);
 
-  graph = svg.append('g').attr('transform', 'translate(50, 50)');
+  graph = svg.append('g').attr('transform', 'translate(25, 25)');
 
   pack = d3
     .pack()
-    .size([container.offsetWidth - 100, container.offsetHeight - 100])
-    .radius((d) => d.data.value)
+    .size([width - 50, height - 50])
+    .radius((d) => d.data.value * 1.2)
     .padding(5);
 };
 

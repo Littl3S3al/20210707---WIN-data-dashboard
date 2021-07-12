@@ -1,0 +1,53 @@
+.top-container{
+    margin-top: 100px!important;
+}
+.white-block{
+    background: rgba(white, 0.8);
+    border-radius: 25px;
+    padding: 50px 50px;
+    color: lighten(black, 40);
+    .content{
+        width: 100%;
+        .subtle-text{
+            line-height: 5px;
+            font-family: Bebas Neue;
+        }
+        hr{
+            margin-bottom: 20px;
+            border-top: 1px solid lighten(black, 20);
+        }
+    }
+
+}
+.dropdown-trigger.btn{
+    font-size: 1.2em;
+    padding: 5px 20px;
+    height: auto;
+}
+
+#dropdown1{
+    max-height: 500px;
+    overflow-y: scroll;
+    width: 27%!important;
+    li{
+        a.region-link{
+            color: lighten(black, 30);
+        }
+        a{
+            color: $teal;
+            font-size: 1.5em!important;
+        }
+    }
+}
+
+div.test{
+    background: red;
+    height: 5px;
+}
+
+.selected{
+    margin-left: 20px;
+    font-family: Bebas Neue; 
+    font-size: 3em;
+    color: lighten(black, 20)
+}

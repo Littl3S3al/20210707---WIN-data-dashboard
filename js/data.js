@@ -17,7 +17,7 @@ const updateData = (gender, type) => {
         let result = compiledData.filter(
           (item) => item.country === country.name && item.gender === gender
         );
-        console.log(result);
+        // console.log(result);
         total += parseInt(result[0].total_answered);
 
         if (v) {
@@ -57,7 +57,7 @@ const updateData = (gender, type) => {
 d3.csv('./data/compiled.csv')
   .then((d) => {
     compiledData = d;
-    console.log(d);
+    // console.log(d);
   })
   .then(() => {
     d3.json('./data/index.json').then((data) => {

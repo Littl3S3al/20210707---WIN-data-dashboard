@@ -697,6 +697,59 @@ nav {
   cursor: pointer;
 }
 
+.top-container {
+  margin-top: 100px !important;
+}
+
+.white-block {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 50px 50px;
+  color: #666666;
+}
+.white-block .content {
+  width: 100%;
+}
+.white-block .content .subtle-text {
+  line-height: 5px;
+  font-family: Bebas Neue;
+}
+.white-block .content hr {
+  margin-bottom: 20px;
+  border-top: 1px solid #333333;
+}
+
+.dropdown-trigger.btn {
+  font-size: 1.2em;
+  padding: 5px 20px;
+  height: auto;
+}
+
+#dropdown1 {
+  max-height: 500px;
+  overflow-y: scroll;
+  width: 27% !important;
+}
+#dropdown1 li a.region-link {
+  color: #4d4d4d;
+}
+#dropdown1 li a {
+  color: #2eb5c3;
+  font-size: 1.5em !important;
+}
+
+div.test {
+  background: red;
+  height: 5px;
+}
+
+.selected {
+  margin-left: 20px;
+  font-family: Bebas Neue;
+  font-size: 3em;
+  color: #333333;
+}
+
 p {
   font-size: 1.2em;
 }

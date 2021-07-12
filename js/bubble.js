@@ -61,6 +61,11 @@ const updateVis = (data) => {
     .duration(1000)
     .attrTween('r', bubTweenEnter);
 
+    d3.selectAll('circle')
+    .attr("pointer-events", d => d.height !== 2 ? "none" : null)
+    .on("mouseover", function() { d3.select(this).attr("stroke", "#fff"); d3.select(this).attr("cursor", "pointer")})
+    .on("mouseout", function() { d3.select(this).attr("stroke", null); })
+
   names.exit().remove();
   values.exit().remove();
 
@@ -80,7 +85,8 @@ const updateVis = (data) => {
       .transition()
       .duration(1000)
       .attr('transform', (d) => `translate(${d.x - d.r / 1.9}, ${d.y - 5})`)
-      .attr('font-size', '1.1em');
+      .attr('font-size', '1.1em')
+      .attr('font-family', 'Bebas Neue');
   } else if (reported && !action) {
     let country_names = d3.selectAll('.country-name');
     country_names
@@ -99,7 +105,8 @@ const updateVis = (data) => {
       .transition()
       .duration(1000)
       .attr('transform', (d) => `translate(${d.x - d.r / 1.9}, ${d.y - 5})`)
-      .attr('font-size', '1.1em');
+      .attr('font-size', '1.1em')
+      .attr('font-family', 'Bebas Neue');
 
     let reported_values = d3.selectAll('.reported');
     reported_values
@@ -111,7 +118,8 @@ const updateVis = (data) => {
       .transition()
       .duration(1000)
       .attr('font-size', '2em')
-      .attr('transform', (d) => `translate(${d.x}, ${d.y + 10})`);
+      .attr('transform', (d) => `translate(${d.x}, ${d.y + 10})`)
+      .attr('font-family', 'Bebas Neue');
   } else {
     names
       .transition()
@@ -127,7 +135,8 @@ const updateVis = (data) => {
       .transition()
       .duration(700)
       .attr('font-size', '2em')
-      .attr('transform', (d) => `translate(${d.x}, ${d.y + 10})`);
+      .attr('transform', (d) => `translate(${d.x}, ${d.y + 10})`)
+      .attr('font-family', 'Bebas Neue');
   }
 
   if (!reported) {
@@ -189,7 +198,7 @@ const updateVis = (data) => {
         return '2em';
       }
     })
-    .attr('font-weight', 700)
+    .attr('font-family', 'Bebas Neue')
     .text((d) => {
       if (d.value > 0) {
         return d.value.toFixed() + '%';
@@ -202,6 +211,7 @@ const updateVis = (data) => {
       let i = d3.interpolate(0, 1);
       return (t) => i(t);
     });
+    
 };
 
 // tweens
@@ -237,17 +247,45 @@ function translateTween(d) {
 
 // function for zooming
 
-// svg.call(
-//   d3
-//     .zoom()
-//     .extent([
-//       [0, 0],
-//       [width, height],
-//     ])
-//     .scaleExtent([1, 8])
-//     .on('zoom', zoomed)
-// );
+svg.call(
+  d3
+    .zoom()
+    .extent([
+      [0, 0],
+      [width, height],
+    ])
+    .scaleExtent([1, 5])
+    .on('zoom', zoomed)
+);
 
-// function zoomed({ transform }) {
-//   svg.attr('transform', transform);
+function zoomed({ transform }) {
+  svg.attr('transform', transform);
+}
+
+let zoomSettings = {
+  duration: 1000,
+  ease: d3.easeCubicOut,
+  zoomLevel: 5
+}
+
+// function clicked(d) {
+//   let x, y, zoomLevel;
+//   if(d && centered !==d){
+//     var centroid = path.centroid(d);
+//     x = centroid[0];
+//     y = centroid[1];
+//     zoomLevel = zoomSettings.zoomLevel;
+//     centered = d;
+//   } 
+//   else {
+//     x = width/2;
+//     y = height/2;
+//     zoomLevel = 1;
+//     centered = null;
+//   }
 // }
+
+// graph.transition()
+//   .duration(zoomSettings.duration)
+//   .ease(zoomSettings.ease)
+//   .attr('transform', `translate(${width/2}, ${height/2})scale(${zoomSettings.zoomLevel})translate(${-x}, ${-y})`)
