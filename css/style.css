@@ -42,6 +42,10 @@
   align-content: center;
 }
 
+.flex-end {
+  align-content: flex-end;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -748,6 +752,54 @@ div.test {
   font-family: Bebas Neue;
   font-size: 3em;
   color: #333333;
+}
+
+.graph-container {
+  height: 70vh;
+}
+
+.graph-content {
+  height: 100%;
+  padding: 20px;
+  font-family: Bebas Neue;
+  display: flex;
+  flex-flow: column;
+}
+
+.content-header {
+  flex: 0 1 auto;
+}
+
+.canvas {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100px;
+}
+
+.bottom-row {
+  flex: 0 1 100px;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.sample-size {
+  display: flex;
+  align-items: center;
+}
+.sample-size .actual-sample {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+#switches-i {
+  display: flex;
+  align-content: flex-start;
+}
+
+.switch-group {
+  display: inline-block;
 }
 
 p {

@@ -157,6 +157,132 @@
       </div>
     </div>
 
+    <!-- *Full data -->
+    <div class="container">
+
+      <div class="row white-text d-flex graph-container">
+        <!-- !experience sh -->
+        <div class="col s12 m6">
+          <div class="graph-content darkBlueMask rounded">
+            <div class="content-header">
+              <h3 class="center-align">Experience</h3>
+            </div>
+            <div class="canvas canvas_i">
+            </div>
+            <div class="bottom-row d-flex space-between">
+              <div class="sample-size">
+                <div class="actual-sample">
+                  sample size: <span id="sample-i">500</span>
+                </div>
+              </div>
+                <!-- switch group 1 -->
+              <div id="switches-i">
+                <!-- Switch -->
+                <div class="switch-group">
+                <div class="switch">
+                  <label>
+                    <input class="switch-i" type="checkbox" checked="true" name="gender" value="f" />
+                    <span class="lever"></span>
+                    F
+                  </label>
+                </div>
+                <!-- Switch -->
+                <div class="switch">
+                  <label>
+                    <input class="switch-i" type="checkbox" name="gender" value="m" checked="true" />
+                    <span class="lever"></span>
+                    M
+                  </label>
+                </div>
+                <!-- Switch -->
+                <div class="switch">
+                  <label>
+                    <input class="switch-i" type="checkbox" name="gender" value="n" checked="true" />
+                    <span class="lever"></span>
+                    GNC
+                  </label>
+                </div>
+                </div>
+
+                <div class="switch-group">
+                  <div class="switch switch-yellow">
+                    <label>
+                      <input class="switch-i"
+                        type="checkbox"
+                        name="type"
+                        value="physical"
+                        checked="true"
+                      />
+                      <span class="lever"></span>
+                      PHYSICAL
+                    </label>
+                  </div>
+      
+                  <div class="switch switch-yellow">
+                    <label>
+                      <input class="switch-i"
+                        type="checkbox"
+                        name="type"
+                        value="verbal"
+                        checked="true"
+                      />
+                      <span class="lever"></span>
+                      VERBAL
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+
+        <!-- !reporting sh -->
+        <div class="col s12 m6">
+          <div class="graph-content darkBlueMask rounded">
+            <h3 class="center-align">Reporting</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row white-text d-flex graph-container">
+        <!-- !action taken-->
+        <div class="col s12 m6">
+          <div class="graph-content darkBlueMask rounded">
+            <h3 class="center-align">Action Taken</h3>
+          </div>
+          
+        </div>
+
+        <!-- !what action -->
+        <div class="col s12 m6">
+          <div class="graph-content darkBlueMask rounded">
+            <h3 class="center-align">What Action?</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row white-text d-flex graph-container">
+        <!-- !reasons for not reporting -->
+        <div class="col s12">
+          <div class="graph-content darkBlueMask rounded">
+            <h3 class="center-align">Reasons for not reporting</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row white-text d-flex graph-container">
+        <!-- !Who was the perpetrator -->
+        <div class="col s12">
+          <div class="graph-content darkBlueMask rounded">
+            <h3 class="center-align">Who was the perpetrator</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
      <!-- *footer -->
      <footer class="page-footer">
       <div class="container">
@@ -205,7 +331,26 @@
     <!-- D3 library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    <!-- legend -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+    <!-- tooltips -->
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bumbeishvili/d3-tip-for-v6@4/d3-tip.min.css"
+    />
+
     <script src="../js/general.js"></script>
     <script src="../js/dropdown.js"></script>
+
+    <script src="../js/full/setup.js"></script>
+    <script src="../js/full/data.js"></script>
+    <script type="module" src="../js/full/expericence.js"></script>
+    <!-- <script type="module" src="../js/full/report.js"></script>
+    <script type="module" src="../js/full/reasonsnot.js"></script>
+    <script type="module" src="../js/full/perpetrator.js"></script>
+    <script type="module" src="../js/full/action.js"></script>
+    <script type="module" src="../js/full/what-action.js"></script> -->
 </body>
 </html>
