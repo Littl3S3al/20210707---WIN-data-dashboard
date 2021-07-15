@@ -7,7 +7,7 @@ let full;
 let filtered;
 
 let switches = document.querySelectorAll(
-  '#main-switch > div > label > input[type=checkbox]'
+  '.switch-ii'
 );
 
 let key = ['Reported All', 'Reported Most', 'Reported some'];
@@ -60,6 +60,8 @@ const filterData = (data, gender, type) => {
   });
 
   let inputs = finalFilter(filtered, key);
+  const sample = document.querySelector('#sample-ii')
+  sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
 };
 
@@ -72,6 +74,8 @@ const dims = {
   width: canvas.offsetWidth,
   marginLeft: 40,
   marginTop: 50,
+  fontSize: '2em',
+  fontFamily: 'Bebas Neue'
 };
 
 const color = d3.scaleOrdinal(['#edf8b1', '#7fcdbb', '#2c7fb8']);
@@ -167,7 +171,8 @@ const update = (data, sumTotal) => {
   xAxisGroup
     .selectAll('text')
     .attr('fill', 'white')
-    .attr('font-family', 'Alegreya Sans');
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   d3.selectAll('path.domain').attr('stroke', 'none');
   d3.selectAll('.tick').attr('color', 'white');
@@ -181,6 +186,10 @@ const update = (data, sumTotal) => {
     .attr('y2', 0)
     .attr('stroke', 'white')
     .attr('stroke-dasharray', '2, 10');
+  yAxisGroup
+    .selectAll('text')
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   graph
     .selectAll('rect')

@@ -1,6 +1,6 @@
 // !--------------------------------------------------------------data content below
 
-// universal switches
+// unversal switches
 let invisibleGender = []; //"m"
 let invisibleType = []; //"physical"
 
@@ -11,22 +11,22 @@ let inputs;
 
 let key = [
   'I was afraid of losing my job',
-  'I was afraid it would negatively impact my job',
+  'I was afraid it would negatvely impact my job',
   "I didn't think my organisation would believe me",
   'There are no reporting mechanisms at my organisation',
   "I didn't know how to report",
   "I didn't think I had evidence",
   'I was afraid the perpetrator would retaliate',
-  "I didn't want myself or others to be negatively labeled",
+  "I didn't want myself or others to be negatvely labeled",
   "I didn't think it was a big deal",
   'I was offered something by the perpetrator for not reporting',
   'Other',
 ];
 
 let switches = document.querySelectorAll(
-  '#reasons-not > div > label > input[type=checkbox]'
+  '.switch-v'
 );
-// document.querySelector("#reasons-not > div:nth-child(2) > label > input[type=checkbox]")
+// document.querySelector("#reasons-not > dv:nth-child(2) > label > input[type=checkbox]")
 
 // ?dealing with html
 switches.forEach((input) => {
@@ -76,22 +76,26 @@ const filterData = (data, gender, type) => {
   });
 
   inputs = finalFilter(filtered, key);
+  const sample = document.querySelector('#sample-v')
+  sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
 };
 
 // !----------------------------------------------------------graph content below
 
-const canvas = document.querySelector('.canvas_iv');
+const canvas = document.querySelector('.canvas_v');
 
 const dims = {
   height: canvas.offsetHeight,
   width: canvas.offsetWidth,
   radius: canvas.offsetHeight / 3,
+  fontSize: '2em',
+  fontFamily: 'Bebas Neue'
 };
 const cent = { x: dims.width / 4 + 5, y: dims.height / 2 + 5 };
 
 const svg = d3
-  .select('.canvas_iv')
+  .select('.canvas_v')
   .append('svg')
   .attr('width', dims.width + 150)
   .attr('height', dims.height + 150);
@@ -129,16 +133,16 @@ const legendGroup = svg
   .append('g')
   .attr(
     'transform',
-    (d) => `translate(${dims.width / 1.8}, ${dims.height / 3.5})`
+    (d) => `translate(${dims.width / 1.8}, ${dims.height / 5})`
   );
 
-const legend = d3.legendColor().shape('square').shapePadding(5).scale(color);
+const legend = d3.legendColor().shape('circle').shapePadding(10).scale(color);
 
 const tip = d3
   .tip()
   .attr('class', 'd3-tip card center-align')
   .html((event, d) => {
-    let content = `<div><h3>${d.data.value.toFixed(1)}%</h3></div>`;
+    let content = `<dv><h3>${d.data.value.toFixed(1)}%</h3></dv>`;
     return content;
   });
 
@@ -158,7 +162,7 @@ const update = (data, sumTotal) => {
     .selectAll('text')
     .data(pie(data))
     .attr('fill', 'white')
-    .attr('font-size', '0.8em')
+    .attr('font-size', '1.2em')
     .each(function (d) {
       assignClass(d.data.key, this);
     });

@@ -87,10 +87,14 @@ div.test{
         padding: 5px 10px;
     }
 }
-#switches-i{
+#switches-i, #switches-ii, #switches-iii, #switches-iv, #switches-v, #switches-vi{
     display: flex;
     align-content: flex-start
 }
 .switch-group{
     display: inline-block;
+}
+
+.d3-tip{
+    font-family: Bebas Neue!important;
 }

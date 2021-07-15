@@ -2,12 +2,13 @@ nav {
   position: fixed;
   top: 0;
   padding: 0px 10px;
-  background: rgba(darken($darkBlue, 15), 0.5);
+  background: rgba(darken($darkBlue, 15), 0.8);
+  z-index: 1000;
 }
 .brand-logo {
   img {
-    margin: 10px 0 5px 0;
-    width: 18rem;
+    margin: 10px 0 10px 0;
+    width: 15rem;
   }
 }
 .sidenav-trigger {

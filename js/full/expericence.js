@@ -134,7 +134,6 @@ graph.call(tip);
 
 // !update function
 const update = (data, sumTotal) => {
-  d3.select('#main-sample').html(sumTotal);
 
   // updating scale domains
   y.domain([0, d3.max(data, (d) => d.value)]);

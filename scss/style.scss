@@ -4,6 +4,9 @@
 p {
   font-size: 1.2em;
 }
+.p-small{
+  font-size: 0.8em;
+}
 h5{
   font-weight: 700;
 }
@@ -21,6 +24,9 @@ h1 {
   font-weight: 700;
   font-size: 6em;
   margin: 0;
+}
+h1.h1-smaller{
+  font-size: 2.5em;
 }
 
 body {
@@ -50,7 +56,67 @@ body#texture-bg {
   height: 10px;
   background: $red;
 }
-.red-arrow{
-  
+.top-item{
+  margin-top: 10vh;
 }
 
+.bulleted-list {
+  margin: 0 50px;
+  li{
+    list-style-type: disc !important;
+    font-size: 1.2em;
+  } 
+}
+// .col{
+//   border: 1px solid pink;
+// }
+.divider{
+  margin: 50px 0; 
+}
+.img-container{
+  img{
+    margin: 20px 0 ;
+    width: Calc(100%);
+  }
+}
+.img-main-container{
+  img{
+    margin: 20px;
+    width: 50%;
+  }
+}
+
+.tabs .tab a {
+  color: lighten(black, 050);
+  font-family: Bebas Neue;
+  font-size: 1em;
+  /*Custom Text Color*/
+}
+a.active{
+  color: $teal!important;
+}
+
+.tabs .tab a:hover {
+  color:$teal;
+  /*Custom Color On Hover*/
+}
+
+.tabs .tab a:focus.active {
+  color: $teal;
+  /*Custom Text Color While Active*/
+  background-color: rgba(38, 166, 154, 0.2);
+  /*Custom Background Color While Active*/
+}
+
+.tabs .indicator {
+  background-color:$teal;
+  /*Custom Color Of Indicator*/
+}
+.tab-content{
+  margin-top: 50px;
+}
+
+blockquote{
+  font-size: 1.3em;
+  border-left: 5px solid $teal;
+}

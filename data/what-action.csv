@@ -1,4 +1,4 @@
-﻿region,country,gender,type,total,Case dismissed with no action,Perpetrator fired,Perpetrator warned,Perpretrator transferred,Perpetrator suspended,Police informed,I was transferred,I was provided support,Organisation provided training for staff,I was fired,other
+﻿region,country,gender,type,total,Dismissed without action,Perpetrator fired,Perpetrator warned,Perpretrator transferred,Perpetrator suspended,Police informed,I was transferred,I was provided support,Organisation provided training,I was fired,other
 africa,botswana,n,verbal,100,0,0,0,0,0,0,0,0,0,0,0
 africa,kenya,n,verbal,100,0,0,0,0,0,0,0,0,0,0,0
 africa,malawi,n,verbal,100,0,0,0,0,0,0,0,0,0,0,0

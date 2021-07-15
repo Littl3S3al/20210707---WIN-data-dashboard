@@ -10,11 +10,11 @@ let filtered;
 let newData = [];
 let inputs;
 
-let key = ['never', 'always', 'mostly', 'sometimes'];
-
 let switches = document.querySelectorAll(
-  '#action-switch > div > label > input[type=checkbox]'
+  '.switch-iii'
 );
+
+let key = ['never', 'always', 'mostly', 'sometimes'];
 // document.querySelector("#reasons-not > div:nth-child(2) > label > input[type=checkbox]")
 
 // ?dealing with html
@@ -65,22 +65,26 @@ const filterData = (data, gender, type) => {
   });
 
   inputs = finalFilter(filtered, key);
+  const sample = document.querySelector('#sample-iii')
+  sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
 };
 
 // !----------------------------------------------------------graph content below
 
-const canvas = document.querySelector('.canvas_iii_a');
+const canvas = document.querySelector('.canvas_iii');
 
 const dims = {
   height: canvas.offsetHeight,
   width: canvas.offsetWidth,
-  radius: canvas.offsetWidth / 3.5,
+  radius: canvas.offsetHeight/ 3.5,
+  fontSize: '2em',
+  fontFamily: 'Bebas Neue'
 };
 const cent = { x: dims.width / 2, y: dims.radius + 20 };
 
 const svg = d3
-  .select('.canvas_iii_a')
+  .select('.canvas_iii')
   .append('svg')
   .attr('width', dims.width)
   .attr('height', dims.height);
@@ -119,8 +123,6 @@ const tip = d3
 graph.call(tip);
 
 const update = (data, sumTotal) => {
-  // update the number of samples
-  d3.select('#action-sample').html(sumTotal);
 
   // update color scale domain
   color.domain(data.map((d) => d.key)); //create an array of keys from the data

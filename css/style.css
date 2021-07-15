@@ -495,12 +495,13 @@ nav {
   position: fixed;
   top: 0;
   padding: 0px 10px;
-  background: rgba(5, 23, 58, 0.5);
+  background: rgba(5, 23, 58, 0.8);
+  z-index: 1000;
 }
 
 .brand-logo img {
-  margin: 10px 0 5px 0;
-  width: 18rem;
+  margin: 10px 0 10px 0;
+  width: 15rem;
 }
 
 .sidenav-trigger {
@@ -793,7 +794,7 @@ div.test {
   padding: 5px 10px;
 }
 
-#switches-i {
+#switches-i, #switches-ii, #switches-iii, #switches-iv, #switches-v, #switches-vi {
   display: flex;
   align-content: flex-start;
 }
@@ -802,8 +803,16 @@ div.test {
   display: inline-block;
 }
 
+.d3-tip {
+  font-family: Bebas Neue !important;
+}
+
 p {
   font-size: 1.2em;
+}
+
+.p-small {
+  font-size: 0.8em;
 }
 
 h5 {
@@ -826,6 +835,10 @@ h1 {
   font-weight: 700;
   font-size: 6em;
   margin: 0;
+}
+
+h1.h1-smaller {
+  font-size: 2.5em;
 }
 
 body {
@@ -857,6 +870,69 @@ body#texture-bg {
   width: 40px;
   height: 10px;
   background: #ff4700;
+}
+
+.top-item {
+  margin-top: 10vh;
+}
+
+.bulleted-list {
+  margin: 0 50px;
+}
+.bulleted-list li {
+  list-style-type: disc !important;
+  font-size: 1.2em;
+}
+
+.divider {
+  margin: 50px 0;
+}
+
+.img-container img {
+  margin: 20px 0;
+  width: calc(100%);
+}
+
+.img-main-container img {
+  margin: 20px;
+  width: 50%;
+}
+
+.tabs .tab a {
+  color: gray;
+  font-family: Bebas Neue;
+  font-size: 1em;
+  /*Custom Text Color*/
+}
+
+a.active {
+  color: #2eb5c3 !important;
+}
+
+.tabs .tab a:hover {
+  color: #2eb5c3;
+  /*Custom Color On Hover*/
+}
+
+.tabs .tab a:focus.active {
+  color: #2eb5c3;
+  /*Custom Text Color While Active*/
+  background-color: rgba(38, 166, 154, 0.2);
+  /*Custom Background Color While Active*/
+}
+
+.tabs .indicator {
+  background-color: #2eb5c3;
+  /*Custom Color Of Indicator*/
+}
+
+.tab-content {
+  margin-top: 50px;
+}
+
+blockquote {
+  font-size: 1.3em;
+  border-left: 5px solid #2eb5c3;
 }
 
 /*# sourceMappingURL=style.css.map */

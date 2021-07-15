@@ -7,11 +7,11 @@ let full;
 let filtered;
 
 let switches = document.querySelectorAll(
-  '#action-switch > div > label > input[type=checkbox]'
+  '.switch-iv'
 );
 
 let key = [
-  'Case dismissed with no action',
+  'Case dismissed',
   'Perpetrator fired',
   'Perpetrator warned',
   'Perpetrator transferred',
@@ -19,7 +19,7 @@ let key = [
   'Police informed',
   'I was transferred',
   'I was provided support',
-  'Organisation provided training for staff',
+  'Organisation provided training',
   'I was fired',
   'other',
 ];
@@ -72,19 +72,23 @@ const filterData = (data, gender, type) => {
   });
 
   let inputs = finalFilter(filtered, key);
+  const sample = document.querySelector('#sample-iv')
+  sample.innerText = inputs.sumTotal;
   update(inputs.newData, inputs.sumTotal);
 };
 
 // !-------------------------------graph
 
-const canvas = document.querySelector('.canvas_iii_b');
+const canvas = document.querySelector('.canvas_iv');
 
 const dims = {
   height: canvas.offsetHeight,
   width: canvas.offsetWidth,
-  marginLeft: 200,
+  marginLeft: canvas.offsetWidth*0.4,
   marginRight: 30,
   marginTop: 50,
+  fontSize: '2em',
+  fontFamily: 'Bebas Neue'
 };
 
 const color = d3.scaleOrdinal([
@@ -103,7 +107,7 @@ const graphWidth = dims.width - dims.marginLeft - dims.marginRight;
 const graphHeight = dims.height - dims.marginTop * 2;
 
 const svg = d3
-  .select('.canvas_iii_b')
+  .select('.canvas_iv')
   .append('svg')
   .attr('width', dims.width)
   .attr('height', dims.height);
@@ -127,7 +131,10 @@ const y = d3
 const x = d3.scaleLinear().range([0, graphWidth]);
 
 // create the axes
-const xAxis = d3.axisBottom(x).ticks(null);
+const xAxis = d3
+  .axisBottom(x)
+  .ticks(5)
+  .tickFormat((d) => d + '%');
 const yAxis = d3
   .axisLeft(y)
   .ticks(4)
@@ -162,7 +169,6 @@ const update = (data, sumTotal) => {
     .attr('y', (d) => y(d.key))
     .attr('height', y.bandwidth())
     .attr('fill', (d) => color(d.key))
-    .attr('rx', (d) => y.bandwidth() / 2)
     .transition()
     .duration(500)
     .attr('width', (d) => x(d.value));
@@ -176,7 +182,6 @@ const update = (data, sumTotal) => {
     .attr('width', 0)
     .attr('height', y.bandwidth())
     .attr('fill', (d) => color(d.key))
-    .attr('rx', (d) => y.bandwidth() / 2)
     .transition()
     .duration(500)
     .attr('width', (d) => x(d.value));
@@ -188,7 +193,8 @@ const update = (data, sumTotal) => {
   xAxisGroup
     .selectAll('text')
     .attr('fill', 'white')
-    .attr('font-family', 'Alegreya Sans');
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   d3.selectAll('path.domain').attr('stroke', 'none');
   d3.selectAll('.tick').attr('color', 'white');
@@ -202,6 +208,10 @@ const update = (data, sumTotal) => {
     .attr('y2', 0)
     .attr('stroke', 'white')
     .attr('stroke-dasharray', '2, 10');
+  yAxisGroup
+    .selectAll('text')
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   graph
     .selectAll('rect')

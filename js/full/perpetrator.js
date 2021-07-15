@@ -14,7 +14,7 @@ let key = [
 ];
 
 let switches = document.querySelectorAll(
-  '#perpetrator > div > label > input[type=checkbox]'
+  '.switch-vi'
 );
 
 // ?dealing with html
@@ -64,6 +64,8 @@ const filterData = (data, gender, type) => {
   });
 
   let inputs = finalFilter(filtered, key);
+  const sample = document.querySelector('#sample-vi')
+  sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
 };
 
@@ -76,13 +78,15 @@ const dims = {
   width: canvas.offsetWidth,
   marginLeft: 100,
   marginTop: 100,
+  fontSize: '2em',
+  fontFamily: 'Bebas Neue'
 };
 
 const graphWidth = dims.width - dims.marginLeft * 2;
 const graphHeight = dims.height - dims.marginTop * 2;
 
 const svg = d3
-  .select('.canvas_v')
+  .select('.canvas_vi')
   .append('svg')
   .attr('width', dims.width)
   .attr('height', dims.height);
@@ -176,7 +180,8 @@ const update = (data, sumTotal) => {
   xAxisGroup
     .selectAll('text')
     .attr('fill', 'white')
-    .attr('font-family', 'Alegreya Sans');
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   d3.selectAll('path.domain').attr('stroke', 'none');
   d3.selectAll('.tick').attr('color', 'white');
@@ -190,6 +195,10 @@ const update = (data, sumTotal) => {
     .attr('y2', 0)
     .attr('stroke', 'white')
     .attr('stroke-dasharray', '2, 10');
+  yAxisGroup
+    .selectAll('text')
+    .attr('font-family', dims.fontFamily)
+    .attr('font-size', dims.fontSize);
 
   graph
     .selectAll('rect')
