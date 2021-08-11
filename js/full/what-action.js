@@ -10,6 +10,18 @@ let switches = document.querySelectorAll(
   '.switch-iv'
 );
 
+let storedCountry = country;
+let storedRegion = region;
+
+
+dropdown.forEach(item => {
+  item.addEventListener('click', () => {
+    if(region !== storedRegion || country !== storedCountry){
+      filterData(full, invisibleGender, invisibleType);
+    }
+  })
+})
+
 let key = [
   'Case dismissed',
   'Perpetrator fired',
@@ -33,6 +45,7 @@ switches.forEach((input) => {
     if (input.name === 'gender') {
       invisibleGender = filterArray(input, invisibleGender);
     }
+    switchesCheck(input, switches, invisibleGender, invisibleType)
     filterData(full, invisibleGender, invisibleType);
   });
 });
@@ -71,7 +84,7 @@ const filterData = (data, gender, type) => {
     filtered = filtered.filter((d) => d.type !== type);
   });
 
-  let inputs = finalFilter(filtered, key);
+  let inputs = finalFilter(filtered, key, '#what-action-div');
   const sample = document.querySelector('#sample-iv')
   sample.innerText = inputs.sumTotal;
   update(inputs.newData, inputs.sumTotal);
@@ -88,7 +101,8 @@ const dims = {
   marginRight: 30,
   marginTop: 50,
   fontSize: '2em',
-  fontFamily: 'Bebas Neue'
+  fontFamily1: 'Bebas Neue',
+  fontFamily2: 'Alegreya Sans'
 };
 
 const color = d3.scaleOrdinal([
@@ -193,7 +207,7 @@ const update = (data, sumTotal) => {
   xAxisGroup
     .selectAll('text')
     .attr('fill', 'white')
-    .attr('font-family', dims.fontFamily)
+    .attr('font-family', dims.fontFamily1)
     .attr('font-size', dims.fontSize);
 
   d3.selectAll('path.domain').attr('stroke', 'none');
@@ -210,7 +224,7 @@ const update = (data, sumTotal) => {
     .attr('stroke-dasharray', '2, 10');
   yAxisGroup
     .selectAll('text')
-    .attr('font-family', dims.fontFamily)
+    .attr('font-family', dims.fontFamily2)
     .attr('font-size', dims.fontSize);
 
   graph

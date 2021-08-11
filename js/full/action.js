@@ -14,6 +14,18 @@ let switches = document.querySelectorAll(
   '.switch-iii'
 );
 
+let storedCountry = country;
+let storedRegion = region;
+
+
+dropdown.forEach(item => {
+  item.addEventListener('click', () => {
+    if(region !== storedRegion || country !== storedCountry){
+      filterData(full, invisibleGender, invisibleType);
+    }
+  })
+})
+
 let key = ['never', 'always', 'mostly', 'sometimes'];
 // document.querySelector("#reasons-not > div:nth-child(2) > label > input[type=checkbox]")
 
@@ -26,6 +38,7 @@ switches.forEach((input) => {
     if (input.name === 'gender') {
       invisibleGender = filterArray(input, invisibleGender);
     }
+    
     filterData(full, invisibleGender, invisibleType);
   });
 });
@@ -64,7 +77,7 @@ const filterData = (data, gender, type) => {
     filtered = filtered.filter((d) => d.type !== type);
   });
 
-  inputs = finalFilter(filtered, key);
+  inputs = finalFilter(filtered, key, '#action-taken-div');
   const sample = document.querySelector('#sample-iii')
   sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
@@ -79,7 +92,7 @@ const dims = {
   width: canvas.offsetWidth,
   radius: canvas.offsetHeight/ 3.5,
   fontSize: '2em',
-  fontFamily: 'Bebas Neue'
+  fontFamily: 'Alegreya Sans'
 };
 const cent = { x: dims.width / 2, y: dims.radius + 20 };
 
@@ -134,16 +147,8 @@ const update = (data, sumTotal) => {
     .selectAll('text')
     .data(pie(data))
     .attr('fill', 'white')
-    .attr('font-size', '0.8em')
-    .each(function (d) {
-      assignClass(d.data.key, this);
-    });
-
-  legendGroup
-    .selectAll('rect')
-    .data(pie(data))
-    .attr('stroke', '#0C3280')
-    .attr('stroke-width', '2px')
+    .attr('font-size', '1em')
+    .attr('font-family', dims.fontFamily)
     .each(function (d) {
       assignClass(d.data.key, this);
     });

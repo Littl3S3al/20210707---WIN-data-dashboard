@@ -26,6 +26,7 @@ switches.forEach((input) => {
     if (input.name === 'gender') {
       invisibleGender = filterArray(input, invisibleGender);
     }
+    switchesCheck(input, switches, invisibleGender, invisibleType)
     filterData(full, invisibleGender, invisibleType);
   });
 });
@@ -63,7 +64,7 @@ const filterData = (data, gender, type) => {
     filtered = filtered.filter((d) => d.type !== type);
   });
 
-  let inputs = finalFilter(filtered, key);
+  let inputs = finalFilter(filtered, key, '#who-perp-div');
   const sample = document.querySelector('#sample-vi')
   sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
@@ -83,7 +84,7 @@ const dims = {
 };
 
 const graphWidth = dims.width - dims.marginLeft * 2;
-const graphHeight = dims.height - dims.marginTop * 2;
+const graphHeight = dims.height - dims.marginTop *1.5;
 
 const svg = d3
   .select('.canvas_vi')

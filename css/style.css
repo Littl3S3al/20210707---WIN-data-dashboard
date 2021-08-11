@@ -462,6 +462,12 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 1200) {
+  .shp {
+    height: 40% !important;
+  }
+}
+
 .p-20 {
   padding: 20px;
 }
@@ -604,6 +610,11 @@ nav {
   height: 90vh;
   color: white;
 }
+@media only screen and (max-width: 1200) {
+  .grid-container {
+    height: auto;
+  }
+}
 
 .grid-item-80 {
   height: 80%;
@@ -730,10 +741,14 @@ nav {
   height: auto;
 }
 
+li.divider {
+  margin: 0 !important;
+}
+
 #dropdown1 {
-  max-height: 500px;
+  max-height: 400px;
   overflow-y: scroll;
-  width: 27% !important;
+  min-width: 300px;
 }
 #dropdown1 li a.region-link {
   color: #4d4d4d;
@@ -741,11 +756,6 @@ nav {
 #dropdown1 li a {
   color: #2eb5c3;
   font-size: 1.5em !important;
-}
-
-div.test {
-  background: red;
-  height: 5px;
 }
 
 .selected {
@@ -762,6 +772,7 @@ div.test {
 .graph-content {
   height: 100%;
   padding: 20px;
+  margin: 10px 5px;
   font-family: Bebas Neue;
   display: flex;
   flex-flow: column;
@@ -807,6 +818,44 @@ div.test {
   font-family: Bebas Neue !important;
 }
 
+#error-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background: #ff4700;
+  border-radius: 10px;
+  padding: 10px 25px;
+  color: white;
+}
+
+.d-none {
+  display: none;
+  opacity: 0;
+}
+
+.bounce-in {
+  animation: 3s ease 1 bounce-in-and-out;
+}
+
+@keyframes bounce-in-and-out {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+    transform: translateY(0);
+  }
+  25%, 75% {
+    opacity: 1;
+    transform: scale(1.1);
+    transform: translateY(-150px);
+  }
+}
+@media only screen and (max-width: 992px) {
+  #reasons-not-reported-div {
+    height: 100vh;
+    margin-bottom: 20px;
+  }
+}
 p {
   font-size: 1.2em;
 }

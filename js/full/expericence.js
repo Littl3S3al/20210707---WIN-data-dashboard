@@ -9,20 +9,30 @@ let filtered;
 let switches = document.querySelectorAll(
   '.switch-i'
 );
+let storedCountry = country;
+let storedRegion = region;
 
+
+dropdown.forEach(item => {
+  item.addEventListener('click', () => {
+    if(region !== storedRegion || country !== storedCountry){
+      filterData(full, invisibleGender, invisibleType);
+    }
+  })
+})
 
 let key = ['Never', 'Once', '2-4 Times', '5 or more', 'unsure'];
 
 // ?dealing with html
 switches.forEach((input) => {
   input.addEventListener('click', () => {
-    console.log('click')
     if (input.name === 'type') {
       invisibleType = filterArray(input, invisibleType);
     }
     if (input.name === 'gender') {
       invisibleGender = filterArray(input, invisibleGender);
     }
+    switchesCheck(input, switches, invisibleGender, invisibleType)
     filterData(full, invisibleGender, invisibleType);
   });
 });
@@ -45,6 +55,7 @@ d3.csv('../data/experience.csv')
     filterData(full, invisibleGender, invisibleType);
   });
 
+
 // function to filter the data
 const filterData = (data, gender, type) => {
   // filter full data by country if not region
@@ -61,7 +72,7 @@ const filterData = (data, gender, type) => {
     filtered = filtered.filter((d) => d.type !== type);
   });
 
-  let inputs = finalFilter(filtered, key);
+  let inputs = finalFilter(filtered, key, '#experience-div');
   const sample = document.querySelector('#sample-i')
   sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);
@@ -77,7 +88,8 @@ const dims = {
   marginLeft: 40,
   marginTop: 50,
   fontSize: '2em',
-  fontFamily: 'Bebas Neue'
+  fontFamily1: 'Bebas Neue',
+  fontFamily2: 'Alegreya Sans'
 };
 
 const color = d3.scaleOrdinal([
@@ -136,7 +148,7 @@ graph.call(tip);
 const update = (data, sumTotal) => {
 
   // updating scale domains
-  y.domain([0, d3.max(data, (d) => d.value)]);
+  y.domain([0, d3.max(data, (d) => d.value + yPad)]);
   x.domain(data.map((item) => item.key));
 
   // join data to rects
@@ -178,7 +190,7 @@ const update = (data, sumTotal) => {
   xAxisGroup
     .selectAll('text')
     .attr('fill', 'white')
-    .attr('font-family', dims.fontFamily)
+    .attr('font-family', dims.fontFamily2)
     .attr('font-size', dims.fontSize);
 
   d3.selectAll('path.domain').attr('stroke', 'none');
@@ -195,7 +207,7 @@ const update = (data, sumTotal) => {
     .attr('stroke-dasharray', '2, 10');
   yAxisGroup
     .selectAll('text')
-    .attr('font-family', dims.fontFamily)
+    .attr('font-family', dims.fontFamily1)
     .attr('font-size', dims.fontSize);
 
   graph

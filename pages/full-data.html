@@ -114,12 +114,12 @@
 
     <!-- *opening -->
     <div class="container top-container">
-      <div class="row white-text valign-wrapper">
-        <div class="col s12 m7">
+      <div class="row white-text ">
+        <div class="col s12 xl7">
           <h1>Full Data</h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus qui fuga, dolore laboriosam hic maxime aut impedit porro perspiciatis doloribus perferendis aperiam. Eius ratione eligendi temporibus consectetur saepe a ea.</p>
         </div>
-        <div class="col s12 m5">
+        <div class="col s12 xl5">
           <div class="white-block valign-wrapper">
 
             <div class="content">
@@ -137,16 +137,16 @@
 
               <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-              <li><a class="region-link" href="#!">Africa</a></li>
+              <li><a class="areaSelector region-link" href="#!">Africa</a></li>
               <li class="divider" tabindex="-1"></li>
-              <li><a href="#!">Botswana</a></li>
-              <li><a href="#!">Kenya</a></li>
-              <li><a href="#!">Malawi</a></li>
-              <li><a href="#!">Rwanda</a></li>
-              <li><a href="#!">Tanzania</a></li>
-              <li><a href="#!">Uganda</a></li>
-              <li><a href="#!">Zambia</a></li>
-              <li><a href="#!">Zimbabwe</a></li>
+              <li><a class="areaSelector"> Botswana</a></li>
+              <li><a class="areaSelector">Kenya</a></li>
+              <li><a class="areaSelector">Malawi</a></li>
+              <li><a class="areaSelector">Rwanda</a></li>
+              <li><a class="areaSelector">Tanzania</a></li>
+              <li><a class="areaSelector">Uganda</a></li>
+              <li><a class="areaSelector">Zambia</a></li>
+              <li><a class="areaSelector">Zimbabwe</a></li>
             </ul>
 
             </div>
@@ -160,9 +160,9 @@
     <!-- *Full data -->
     <div class="container">
 
-      <div class="row white-text d-flex graph-container">
+      <div class="row white-text graph-container">
         <!-- !experience sh -->
-        <div class="col s12 m7">
+        <div class="col s12 xl7" id="experience-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">Experience</h3>
@@ -241,7 +241,7 @@
         </div>
 
         <!-- !reporting sh -->
-        <div class="col s12 m5">
+        <div class="col s12 xl5" id="reporting-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">Reporting</h3>
@@ -322,9 +322,9 @@
         </div>
       </div>
 
-      <div class="row white-text d-flex graph-container">
+      <div class="row white-text graph-container">
         <!-- !action taken-->
-        <div class="col s12 m5">
+        <div class="col s12 xl5" id="action-taken-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">Action Taken</h3>
@@ -405,7 +405,7 @@
         </div>
 
         <!-- !what action -->
-        <div class="col s12 m7">
+        <div class="col s12 xl7" id="what-action-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">What action</h3>
@@ -486,9 +486,9 @@
         </div>
       </div>
 
-      <div class="row white-text d-flex graph-container">
+      <div class="row white-text graph-container">
         <!-- !reasons for not reporting -->
-        <div class="col s12">
+        <div class="col s12" id="reasons-not-reported-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">Reasons for not reporting</h3>
@@ -569,9 +569,9 @@
         </div>
       </div>
 
-      <div class="row white-text d-flex graph-container">
+      <div class="row white-text graph-container">
         <!-- !Who was the perpetrator -->
-        <div class="col s12">
+        <div class="col s12" id="who-perp-div">
           <div class="graph-content darkBlueMask rounded">
             <div class="content-header">
               <h3 class="center-align">Who was the perpetrator</h3>
@@ -695,6 +695,13 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- Error message box -->
+    <div class="z-depth-5 d-none" id="error-div">
+      <div class="center-align"> <i class="large material-icons">warning</i></div>
+      <p>Sorry, the sample size for this selection is too small to be viewed.</p>
+    </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

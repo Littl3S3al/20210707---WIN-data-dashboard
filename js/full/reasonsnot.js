@@ -37,6 +37,7 @@ switches.forEach((input) => {
     if (input.name === 'gender') {
       invisibleGender = filterArray(input, invisibleGender);
     }
+    switchesCheck(input, switches, invisibleGender, invisibleType)
     filterData(full, invisibleGender, invisibleType);
   });
 });
@@ -75,7 +76,7 @@ const filterData = (data, gender, type) => {
     filtered = filtered.filter((d) => d.type !== type);
   });
 
-  inputs = finalFilter(filtered, key);
+  inputs = finalFilter(filtered, key, '#reasons-not-reported-div');
   const sample = document.querySelector('#sample-v')
   sample.innerText = inputs.sumTotal
   update(inputs.newData, inputs.sumTotal);

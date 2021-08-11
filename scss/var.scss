@@ -7,6 +7,41 @@ $yellow: #ffb000;
 $gradient: linear-gradient(90deg, rgba(63,161,252,1) 0%, rgba(9,9,121,1) 45%, rgba(46,217,195,1) 100%);
 $gradient-opaque: linear-gradient(90deg, rgba(63,161,252,0.5) 0%, rgba(9,9,121,0.5) 45%, rgba(46,217,195,0.5) 100%);
 
+// Breakpoints
+$s: 600px;
+$m: 600px;
+$l: 992px;
+$xl: 1200;
+
+// media queries
+@mixin mQmax ($arg...) {
+  @if length($arg) == 1{
+      @media only screen and (max-width: nth($arg, 1)){
+          @content;
+      }
+  }
+  @if length($arg) == 2{
+      @media only screen and (max-width: nth($arg, 1)) and (orientation: nth($arg, 2)){
+          @content;
+      }
+  }
+}
+
+@mixin mQmin ($arg...) {
+  @if length($arg) == 1{
+      @media only screen and (min-width: nth($arg, 1)){
+          @content;
+      }
+  }
+  @if length($arg) == 2{
+      @media only screen and (min-width: nth($arg, 1)) and (orientation: nth($arg, 2)){
+          @content;
+      }
+  }
+}
+
+
+
 .darkBlue {
   background: $darkBlue;
 }
@@ -65,7 +100,11 @@ $end: 100;
     height: ($i) * 1%;
   }
 }
-
+.shp{
+  @include mQmax($xl){
+    height: 40%!important;
+  }
+}
 
 // *padding styles
 .p-20{

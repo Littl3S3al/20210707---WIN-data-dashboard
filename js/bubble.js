@@ -3,16 +3,22 @@ let positionData;
 
 // data visualisation function
 const updateVis = (data) => {
+
+  pack = d3
+    .pack()
+    .size([width - 50, height - 50])
+    .padding(15);
+
   positionData = pack(data).descendants();
 
   bubbleData = positionData.filter(
     (d) => d.data.name !== 'not_reported' && d.data.name !== 'no action-taken'
   );
 
-  if (!reported) {
+  if (!switches[5].checked) {
     bubbleData = bubbleData.filter((d) => d.data.name !== 'action-taken');
     bubbleData = bubbleData.filter((d) => d.data.name !== 'reported');
-  } else if (!action) {
+  } else if (!switches[6].checked) {
     bubbleData = bubbleData.filter((d) => d.data.name !== 'action-taken');
   }
 
@@ -71,11 +77,24 @@ const updateVis = (data) => {
 
   // adjust current values text to animate
   if (reported && action) {
-    names
+    let country_names = d3.selectAll('.country-name');
+    country_names
       .transition()
       .duration(1000)
-      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 20})`)
-      .attr('font-size', '0.7em');
+      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 25})`)
+      .attr('font-size', '1em');
+
+    let country_values = d3.selectAll('.country');
+    country_values
+      .text((d) => {
+        if (d.value > 0) {
+          return d.value.toFixed() + '%';
+        }
+      })
+      .transition()
+      .duration(1000)
+      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 5})`)
+      .attr('font-size', '1.4em')
     values
       .text((d) => {
         if (d.value > 0) {
@@ -92,8 +111,8 @@ const updateVis = (data) => {
     country_names
       .transition()
       .duration(1000)
-      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 20})`)
-      .attr('font-size', '0.7em');
+      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 25})`)
+      .attr('font-size', '1em');
 
     let country_values = d3.selectAll('.country');
     country_values
@@ -104,9 +123,8 @@ const updateVis = (data) => {
       })
       .transition()
       .duration(1000)
-      .attr('transform', (d) => `translate(${d.x - d.r / 1.9}, ${d.y - 5})`)
-      .attr('font-size', '1.1em')
-      .attr('font-family', 'Bebas Neue');
+      .attr('transform', (d) => `translate(${d.x - d.r / 2}, ${d.y - 5})`)
+      .attr('font-size', '1.4em')
 
     let reported_values = d3.selectAll('.reported');
     reported_values
@@ -117,8 +135,8 @@ const updateVis = (data) => {
       })
       .transition()
       .duration(1000)
-      .attr('font-size', '2em')
       .attr('transform', (d) => `translate(${d.x}, ${d.y + 10})`)
+      .attr('font-size', '1em')
       .attr('font-family', 'Bebas Neue');
   } else {
     names

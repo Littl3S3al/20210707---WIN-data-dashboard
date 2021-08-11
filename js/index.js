@@ -46,6 +46,9 @@ document.addEventListener('click', (e) => {
         break;
     }
 
+    if(switches[5].checked){reported = true}
+    if(switches[6].checked){reported, action = true}
+
     // UPDATE BUBBLE DATA IF SWITCHES WERE CLICKED
     updateData(gender, type);
   }

@@ -14,11 +14,6 @@ const resizeEvent = () => {
 
   graph = svg.append('g').attr('transform', 'translate(25, 25)');
 
-  pack = d3
-    .pack()
-    .size([width - 50, height - 50])
-    .radius((d) => d.data.value * 1.2)
-    .padding(5);
 };
 
 resizeEvent();
@@ -36,4 +31,4 @@ let switches = document.querySelectorAll('input[type=checkbox]');
 let gender = ['f', 'm', 'n'];
 let type = ['v', 'p'];
 let reported,
-  action = false;
+  action;
