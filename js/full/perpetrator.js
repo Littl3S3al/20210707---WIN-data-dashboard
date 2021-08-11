@@ -40,7 +40,7 @@ function filterArray(input, array) {
   return array;
 }
 
-d3.csv('../data/perpetrator.csv')
+d3.csv('../../data/perpetrator.csv')
   .then((data) => {
     full = data;
   })
