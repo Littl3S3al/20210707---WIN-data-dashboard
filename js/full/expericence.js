@@ -47,14 +47,14 @@ function filterArray(input, array) {
 }
 
 // *calling data
-d3.csv('../data/experience.csv')
+d3.csv('data/experience.csv')
   .then((data) => {
     full = data;
   })
   .then(() => {
     filterData(full, invisibleGender, invisibleType);
   });
-  console.log('new link')
+  console.log('another link')
 
 
 // function to filter the data
