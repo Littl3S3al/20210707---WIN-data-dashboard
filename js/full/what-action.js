@@ -60,7 +60,7 @@ function filterArray(input, array) {
 }
 
 // *calling data
-d3.csv('../../data/what-action.csv')
+d3.csv('data/what-action.csv')
   .then((data) => {
     full = data;
   })

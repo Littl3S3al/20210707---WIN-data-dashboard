@@ -53,7 +53,7 @@ function filterArray(input, array) {
 }
 
 // *calling data
-d3.csv('../../data/action.csv')
+d3.csv('data/action.csv')
   .then((data) => {
     full = data;
   })

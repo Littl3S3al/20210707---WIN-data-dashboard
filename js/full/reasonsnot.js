@@ -52,7 +52,7 @@ function filterArray(input, array) {
 }
 
 // *calling data
-d3.csv('../../data/reason-not-reported.csv')
+d3.csv('data/reason-not-reported.csv')
   .then((data) => {
     full = data;
   })

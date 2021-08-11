@@ -54,7 +54,6 @@ d3.csv('data/experience.csv')
   .then(() => {
     filterData(full, invisibleGender, invisibleType);
   });
-  console.log('another link')
 
 
 // function to filter the data
